@@ -1,0 +1,339 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/game_panel.gd" id="1_game_panel"]
+
+[node name="GamePanel" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_game_panel")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 48)
+theme_override_constants/separation = 8
+
+[node name="EquipmentLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+text = "设备:"
+vertical_alignment = 1
+
+[node name="StoveButton" type="Button" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(100, 40)
+text = "烤箱"
+toggle_mode = true
+
+[node name="PotButton" type="Button" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(100, 40)
+text = "锅"
+toggle_mode = true
+
+[node name="FermenterButton" type="Button" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(100, 40)
+text = "发酵器"
+toggle_mode = true
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EquipmentInfo" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+vertical_alignment = 1
+horizontal_alignment = 2
+
+[node name="Sep" type="VSeparator" parent="MarginContainer/VBoxContainer/TopBar"]
+layout_mode = 2
+
+[node name="CodexButton" type="Button" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(80, 40)
+text = "图鉴"
+
+[node name="SettingsButton" type="Button" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(80, 40)
+text = "设置"
+
+[node name="PauseButton" type="Button" parent="MarginContainer/VBoxContainer/TopBar"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(80, 40)
+text = "暂停"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ContentContainer" type="HSplitContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+split_offset = 480
+
+[node name="MaterialPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer/ContentContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MaterialTitle" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "材料选择"
+theme_override_font_sizes/font_size = 20
+
+[node name="CategoryTabs" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="AllButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/CategoryTabs"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(60, 32)
+text = "全部"
+toggle_mode = true
+button_pressed = true
+
+[node name="GrainButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/CategoryTabs"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(60, 32)
+text = "谷物"
+toggle_mode = true
+
+[node name="MeatButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/CategoryTabs"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(60, 32)
+text = "肉类"
+toggle_mode = true
+
+[node name="VegetableButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/CategoryTabs"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(60, 32)
+text = "蔬菜"
+toggle_mode = true
+
+[node name="FruitButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/CategoryTabs"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(60, 32)
+text = "水果"
+toggle_mode = true
+
+[node name="DairyButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/CategoryTabs"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(60, 32)
+text = "乳制品"
+toggle_mode = true
+
+[node name="OtherButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/CategoryTabs"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(60, 32)
+text = "其他"
+toggle_mode = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MaterialGrid" type="GridContainer" parent="MarginContainer/VBoxContainer/ContentContainer/MaterialPanel/MarginContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 5
+
+[node name="CookingPanel" type="PanelContainer" parent="MarginContainer/VBoxContainer/ContentContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="CookingTitle" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "烹饪台"
+theme_override_font_sizes/font_size = 20
+
+[node name="InputSlotsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 120)
+theme_override_constants/separation = 8
+
+[node name="InputSlot1" type="PanelContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot1"]
+layout_mode = 2
+
+[node name="SlotIcon" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot1/VBoxContainer"]
+layout_mode = 2
+text = "1"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+
+[node name="SlotLabel" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot1/VBoxContainer"]
+layout_mode = 2
+text = "空"
+horizontal_alignment = 1
+
+[node name="InputSlot2" type="PanelContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot2"]
+layout_mode = 2
+
+[node name="SlotIcon" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot2/VBoxContainer"]
+layout_mode = 2
+text = "2"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+
+[node name="SlotLabel" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot2/VBoxContainer"]
+layout_mode = 2
+text = "空"
+horizontal_alignment = 1
+
+[node name="InputSlot3" type="PanelContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+visible = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot3"]
+layout_mode = 2
+
+[node name="SlotIcon" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot3/VBoxContainer"]
+layout_mode = 2
+text = "3"
+horizontal_alignment = 1
+theme_override_font_sizes/font_size = 28
+
+[node name="SlotLabel" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/InputSlotsContainer/InputSlot3/VBoxContainer"]
+layout_mode = 2
+text = "空"
+horizontal_alignment = 1
+
+[node name="CookingControls" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/CookingControls"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 56)
+text = "开始烹饪"
+theme_override_font_sizes/font_size = 22
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/CookingControls"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 16)
+value = 0.0
+visible = false
+
+[node name="ClearButton" type="Button" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/CookingControls"]
+unique_name_in_owner = true
+layout_mode = 2
+custom_minimum_size = Vector2(0, 36)
+text = "清空材料"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ResultArea" type="PanelContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/ResultArea"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/ResultArea/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="ResultTitle" type="Label" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/ResultArea/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "上次结果"
+theme_override_font_sizes/font_size = 16
+
+[node name="ResultLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/ContentContainer/CookingPanel/MarginContainer/VBoxContainer/ResultArea/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "选择材料开始烹饪..."
+fit_content = true
+scroll_active = false
+
+[node name="StatusBar" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 32)
+
+[node name="MaterialCountLabel" type="Label" parent="MarginContainer/VBoxContainer/StatusBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "材料: 0/0"
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/StatusBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RecipeCountLabel" type="Label" parent="MarginContainer/VBoxContainer/StatusBar"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "配方: 0/0"
+vertical_alignment = 1

@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "project": "Cookery",
+  "created": "2026-05-29",
+  "updated": "2026-05-29",
+  "workflow": {
+    "language": "zh-CN",
+    "auto_commit": true,
+    "verification_required": true,
+    "parallel_agents": 4
+  },
+  "phases": {
+    "max_concurrent": 1,
+    "require_approval": true,
+    "auto_verify": true
+  },
+  "testing": {
+    "framework": "gut",
+    "auto_run": false,
+    "coverage_threshold": 80
+  },
+  "codebase": {
+    "mapped": true,
+    "last_scan": "2026-05-29",
+    "documents": [
+      "STACK.md",
+      "INTEGRATIONS.md",
+      "ARCHITECTURE.md",
+      "STRUCTURE.md",
+      "CONVENTIONS.md",
+      "TESTING.md",
+      "CONCERNS.md"
+    ]
+  },
+  "integrations": {
+    "mcp_servers": ["godot-docs", "godot-mcp"],
+    "skills": ["game-architect", "godot-prompter"],
+    "framework": "mc_game_framework"
+  },
+  "constraints": {
+    "language": "GDScript",
+    "input_system": "GUIDE",
+    "data_pattern": "Resource",
+    "framework": "mc_game_framework"
+  }
+}
